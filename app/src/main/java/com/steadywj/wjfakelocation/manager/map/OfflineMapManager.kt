@@ -68,8 +68,8 @@ class OfflineMapManager @Inject constructor(
             try {
                 // 检查网络连�?
                 if (!isWifiConnected() && !isNetworkAvailable()) {
-                    _downloadState.value = DownloadState.ERROR("无网络连�?)
-                    return@withContext Result.failure(Exception("无网络连�?))
+                    _downloadState.value = DownloadState.ERROR("无网络连接")
+                    return@withContext Result.failure(Exception("无网络连接"))
                 }
                 
                 _downloadState.value = DownloadState.DOWNLOADING
@@ -87,7 +87,7 @@ class OfflineMapManager @Inject constructor(
                 for (x in tileRange.startX..tileRange.endX) {
                     for (y in tileRange.startY..tileRange.endY) {
                         if (_downloadState.value == DownloadState.CANCELLED) {
-                            return@withContext Result.failure(Exception("下载已取�?))
+                            return@withContext Result.failure(Exception("下载已取消"))
                         }
                         
                         try {

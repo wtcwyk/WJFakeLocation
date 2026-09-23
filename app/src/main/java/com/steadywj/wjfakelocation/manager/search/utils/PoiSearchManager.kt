@@ -43,7 +43,7 @@ class PoiSearchManager @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 val poiSearch = PoiSearch(context, "")
-                val query = PoiSearch.Query("", type.code, "北京�?) // 城市
+                val query = PoiSearch.Query("", type.code, "北京") // 城市
                 
                 // 设置范围
                 query.setPageSize(20) // 每页 20 �?
@@ -164,7 +164,7 @@ enum class PoiType(val code: String, val displayName: String) {
     FOOD("餐饮服务", "美食"),
     HOTEL("住宿服务", "酒店"),
     SHOPPING("购物服务", "购物"),
-    TRANSPORT("交通设�?, "交�?),
+    TRANSPORT("交通设施", "交通"),
     ENTERTAINMENT("休闲娱乐", "娱乐"),
     EDUCATION("教育培训", "教育"),
     MEDICAL("医疗服务", "医疗"),

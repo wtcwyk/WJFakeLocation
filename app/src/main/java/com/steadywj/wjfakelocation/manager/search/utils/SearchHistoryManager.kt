@@ -262,7 +262,7 @@ enum class POICategory(val displayName: String) {
     FOOD("美食"),
     HOTEL("酒店"),
     SHOPPING("购物"),
-    TRANSPORT("交�?),
+    TRANSPORT("交通"),
     EDUCATION("教育"),
     MEDICAL("医疗"),
     ENTERTAINMENT("娱乐"),

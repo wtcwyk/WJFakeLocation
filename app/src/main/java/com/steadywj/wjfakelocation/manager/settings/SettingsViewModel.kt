@@ -103,7 +103,7 @@ class SettingsViewModel @Inject constructor(
     fun saveApiKey(apiKey: String) {
         viewModelScope.launch {
             preferencesRepository.saveApiKey(apiKey)
-            _uiState.value = _uiState.value.copy(showSuccessMessage = "API Key 已保�?)
+            _uiState.value = _uiState.value.copy(showSuccessMessage = "API Key 已保存")
         }
     }
 
@@ -113,7 +113,7 @@ class SettingsViewModel @Inject constructor(
     fun clearApiKey() {
         viewModelScope.launch {
             preferencesRepository.clearApiKey()
-            _uiState.value = _uiState.value.copy(showSuccessMessage = "API Key 已清�?)
+            _uiState.value = _uiState.value.copy(showSuccessMessage = "API Key 已清除")
         }
     }
 

@@ -55,7 +55,7 @@ class MapInteractionManager @Inject constructor() {
                 aMap.projection.fromScreenLocation(
                     android.graphics.Point(screenX.toInt(), screenY.toInt())
                 )?.let { latLng ->
-                    addMarkerAtLocation(aMap, latLng, "长按添加的位�?)
+                    addMarkerAtLocation(aMap, latLng, "长按添加的位置")
                 }
             }
             

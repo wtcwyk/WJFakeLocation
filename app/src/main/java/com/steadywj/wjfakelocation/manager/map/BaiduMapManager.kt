@@ -148,7 +148,7 @@ class BaiduMapManager @Inject constructor(
                                 trySend(Result.failure(Exception("无法解析地址")))
                             }
                         } else {
-                            trySend(Result.failure(Exception("逆地理编码结果为�?)))
+                            trySend(Result.failure(Exception("逆地理编码结果为空")))
                         }
                     } catch (e: Exception) {
                         trySend(Result.failure(e))
